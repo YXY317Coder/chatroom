@@ -28,6 +28,9 @@
 	else if (o === 'get'){
 		url = apd(o) + apt('tag',args[0]);
 	}
+	else if (o === 'delete'){
+		url = apd(o) + apt('tag',args[0]);
+	}
 	xhr.open("GET", url, false); 
 	xhr.send();
 	if (xhr.status === 200) {
