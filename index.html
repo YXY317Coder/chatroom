@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Request Example</title>
+    <style>
+        .lanch{
+            background-color: #007eff;
+            margin: 5px;
+            color: white;
+            padding: 7px;
+        }
+    </style>
+    <script>
+    function pt(wd){
+	var xhr = new XMLHttpRequest();
+                var url = wd;
+	xhr.open("GET", url, false); 
+	xhr.send();
+	if (xhr.status === 200) {
+	    return(xhr.responseText);
+	} else {
+	    return(xhr.statusText);
+	}
+   };
+    </script>
+</head>
+<body>
+    <div class = "lanch">
+    <button onclick = "document.write(pt('http://tinywebdb.appinventor.space/api?user=name317&secret=53c40c78&action=count'))">查询</button>
+    </div>
+</body>
+</html>
