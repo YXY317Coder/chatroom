@@ -16,12 +16,18 @@
 	    return '&' + tin + '=' + wm;
     }
     function apd(act){
-	var yon = 'http://tinywebdb.appinventor.space/api?user=name317&secret=53c40c78' + act;
+	var yon = 'http://tinywebdb.appinventor.space/api?user=name317&secret=53c40c78&action=' + act;
 	return yon;
     }
-    function pt(wd,o,...args){
+    function pt(o,...args){
 	var xhr = new XMLHttpRequest();
-        var url = wd;
+        var url = '';
+	if (o === 'count'){
+		url = apd(o);
+	}
+	else if (o === 'get'){
+		url = apd(o) + apt('tag',args[0]);
+	}
 	xhr.open("GET", url, false); 
 	xhr.send();
 	if (xhr.status === 200) {
@@ -34,7 +40,7 @@
 </head>
 <body>
     <div class = "lanch">
-    <button onclick = "document.write(pt('http://tinywebdb.appinventor.space/api?user=name317&secret=53c40c78&action=count'))">查询</button>
+    <button onclick = "document.write(pt('count'))">查询</button>
     </div>
 </body>
 </html>
