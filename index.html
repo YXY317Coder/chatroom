@@ -34,6 +34,9 @@
 	else if (o === 'update'){
 		url = apd(o) + apt('tag',args[0]) + apt('value',args[1]);
 	}
+	else if (o === 'search'){
+		url = apd(o) + apt('no',args[0]) + apt('count',args[1]) + apt('tag',args[2]) + apt('type',args[3]);
+	}
 	xhr.open("GET", url, false); 
 	xhr.send();
 	if (xhr.status === 200) {
