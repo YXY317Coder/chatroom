@@ -19,9 +19,9 @@
 	var yon = 'http://tinywebdb.appinventor.space/api?user=name317&secret=53c40c78' + act;
 	return yon;
     }
-    function pt(wd){
+    function pt(wd,o){
 	var xhr = new XMLHttpRequest();
-                var url = wd;
+        var url = wd;
 	xhr.open("GET", url, false); 
 	xhr.send();
 	if (xhr.status === 200) {
