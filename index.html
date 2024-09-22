@@ -71,11 +71,14 @@
 	};
 	function login_do(){
 		var div = document.getElementById('chatdiv');
-  		if (div.style.display === 'none') {
-    		div.style.display = 'block';
-  		} else {
-    		div.style.display = 'none'; 
-  		}
+  		div.style.display = 'block';
+		var newDiv = document.createElement('h4');
+		newDiv.innerHTML = '当前账户名：' + nowname;
+		if (div.children.length > 0) {
+		    div.insertBefore(newDiv, div.children[0]);
+		} else {
+		    div.appendChild(newDiv);
+		}
 	};
     </script>
 </head>
