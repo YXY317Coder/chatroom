@@ -106,8 +106,8 @@
 		}
    	};
 	function login(){
-		var d1 = document.getElementById('naee');
-		var d2 = document.getElementById('phin');
+		var d1 = document.getElementById('naee').value;
+		var d2 = document.getElementById('phin').value;
 		if (pt('get',d1 + '_password') !== d2){
 			alert("用户名或密码错误！");
 		}
@@ -116,8 +116,8 @@
 		}
 	};
 	function lange(){
-		var d1 = document.getElementById('naee');
-		var d2 = document.getElementById('phin');
+		var d1 = document.getElementById('naee').value;
+		var d2 = document.getElementById('phin').value;
 		if (pt('update',d1 + '_password',d2)){
 			alert("创建账号成功！");
 		}
