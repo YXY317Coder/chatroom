@@ -108,7 +108,7 @@
 	function login(){
 		var d1 = document.getElementById('naee').value;
 		var d2 = document.getElementById('phin').value;
-		if (pt('get',d1 + '_password') !== d2){
+		if (pt('get',d1 + '_password')[d1 + '_password'] !== d2){
 			alert("用户名或密码错误！");
 		}
 		else{
