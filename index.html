@@ -120,7 +120,8 @@
 	function lange(){
 		var d1 = document.getElementById('naee').value;
 		var d2 = document.getElementById('phin').value;
-		if (pt('update',d1 + '_password',d2)){
+		var d3 = JSON.parse(pt('update',d1 + '_password',d2));
+		if (d3 === 'null'){
 			alert("创建账号成功！");
 		}
 		else{
