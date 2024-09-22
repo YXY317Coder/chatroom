@@ -44,8 +44,16 @@
 	    text-align: right;
 	    margin-left: auto;
         }
+	.phing{
+            background-color: #007eff;
+            margin: 5px;
+            color: white;
+            padding: 7px;
+	    text-align: middle;
+        }
     </style>
     <script>
+    var nowname;
     function apt(tin,wm){
 	    return '&' + tin + '=' + wm;
     }
@@ -79,11 +87,19 @@
 		    return(xhr.statusText);
 		}
    	};
+	function login(){
+		
+	}
     </script>
 </head>
 <body>
     <div class = "lanch">
-    <button onclick = "document.write(pt('count'))">查询</button>
+    <button onclick = "login()">登录</button>
+    </div>
+    <div class = "phing">
+    <input type = "input" id = "name"></input>
+    <br>
+    <input type = "input" id = "phin"></input>
     </div>
 </body>
 </html>
