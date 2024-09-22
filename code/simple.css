@@ -61,3 +61,11 @@ input {
 	    text-align: center;
 	    margin-left: auto;
         }
+	.blim{
+		background-color: #007eff;
+		display: none;
+		margin: 0px;
+		margin-left: auto;
+        color: white;
+        padding: 7px;
+	}
