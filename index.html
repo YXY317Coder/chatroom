@@ -71,7 +71,7 @@
         }
     </style>
     <script>
-    var nowname;
+    var nowname = null;
     function apt(tin,wm){
 	    return '&' + tin + '=' + wm;
     }
@@ -113,6 +113,7 @@
 			alert("用户名或密码错误！");
 		}
 		else{
+			nowname = d1;
 			alert("登陆成功！");
 		}
 	};
