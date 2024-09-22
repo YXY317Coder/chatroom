@@ -70,7 +70,12 @@
 		}
 	};
 	function login_do(){
-		
+		var div = document.getElementById('chatdiv');
+  		if (div.style.display === 'none') {
+    		div.style.display = 'block';
+  		} else {
+    		div.style.display = 'none'; 
+  		}
 	};
     </script>
 </head>
@@ -86,5 +91,9 @@
 	<br>
 	<span><button onclick = "login()">登录</button><button onclick = "lange()">注册</button></span>
     </div>
+	<br>
+	<div id="chatdiv" class = "blour">
+  		<marquee>测试中，这里暂时没有任何内容。&ensp;&ensp;&ensp;&ensp;&ensp;Testing...&nbsp;Nothing here...</marquee>
+	</div>
 </body>
 </html>
