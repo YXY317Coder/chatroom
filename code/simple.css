@@ -45,6 +45,7 @@ input {
 	    text-align: right;
 	    margin-left: auto;
 	    margin: 0px;
+		border-radius:10px;
         }
 		.leoth{
             background-color: #007eff;
@@ -52,6 +53,7 @@ input {
             color: white;
             padding: 7px;
 	    margin-left: auto;
+			border-radius:10px;
         }
 	.phing{
             background-color: #007eff;
@@ -60,6 +62,7 @@ input {
             padding: 7px;
 	    text-align: center;
 	    margin-left: auto;
+		border-radius:10px;
         }
 	.blim{
 		background-color: #007eff;
@@ -68,4 +71,5 @@ input {
 		margin-left: auto;
         color: white;
         padding: 7px;
+		border-radius:10px;
 	}
