@@ -76,7 +76,7 @@
 		var d1 = document.getElementById('naee').value;
 		var d2 = document.getElementById('phin').value;
 		var d3 = JSON.parse(pt('get',d1 + '_password'));
-		if (d2.trim !== '' || d1.trim !== ''){
+		if (d2.trim() !== '' || d1.trim() !== ''){
 			if (d3[d1 + '_password'] === 'null'){
 				var d4 = JSON.parse(pt('update',d1 + '_password',d2));
 				if (d4['status'] === 'success'){
