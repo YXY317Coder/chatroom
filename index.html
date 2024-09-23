@@ -57,11 +57,17 @@
 	function lange(){
 		var d1 = document.getElementById('naee').value;
 		var d2 = document.getElementById('phin').value;
-		var d3 = JSON.parse(pt('update',d1 + '_password',d2));
-		if (d3['status'] === 'success'){
-			nowname = d1;
-			alert("创建账号成功！已登录到此账号：" + d1 + "，密码请熟记：" + d2 + " ！");
-			login_do();
+		var d3 = JSON.parse(pt('get',d1 + '_password'));
+		if (d3[d1 + '_password'] === 'null'){
+			var d4 = JSON.parse(pt('update',d1 + '_password',d2));
+			if (d4['status'] === 'success'){
+				nowname = d1;
+				alert("创建账号成功！已登录到此账号：" + d1 + "，密码请熟记：" + d2 + " ！");
+				login_do();
+			}
+			else{
+				alert("尝试创建账号失败！请检查网络和输入！);
+			}
 		}
 		else if (d3 !== ''){
 			alert('已有这个账号！');
