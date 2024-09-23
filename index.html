@@ -7,7 +7,6 @@
     <link href = "code/simple.css" rel = "stylesheet">
 	<link rel="icon" href="favicon.ico">
     <script>
-    var nowname = null;
     function apt(tin,wm){
 	    return '&' + tin + '=' + wm;
     }
@@ -49,7 +48,7 @@
 			alert("用户名或密码错误！");
 		}
 		else{
-			nowname = d1;
+			window.localStorage.setItem('nowname',d1);
 			alert("登陆成功！已登录到此账号：" + d1);
 			login_do();
 		}
@@ -58,22 +57,24 @@
 		var d1 = document.getElementById('naee').value;
 		var d2 = document.getElementById('phin').value;
 		var d3 = JSON.parse(pt('get',d1 + '_password'));
-		if (d3[d1 + '_password'] === 'null'){
-			var d4 = JSON.parse(pt('update',d1 + '_password',d2));
-			if (d4['status'] === 'success'){
-				nowname = d1;
-				alert("创建账号成功！已登录到此账号：" + d1 + "，密码请熟记：" + d2 + " ！");
-				login_do();
+		if (String.prototype.trim(d2) == '' || String.prototype.trim(d1) == ''){
+			if (d3[d1 + '_password'] === 'null'){
+				var d4 = JSON.parse(pt('update',d1 + '_password',d2));
+				if (d4['status'] === 'success'){
+					window.localStorage.setItem('nowname',d1);
+					alert("创建账号成功！已登录到此账号：" + d1 + "，密码请熟记：" + d2 + " ！");
+					login_do();
+				}
+				else{
+					alert("尝试创建账号失败！请检查网络和输入！");
+				}
+			}
+			else if (d3 !== ''){
+				alert('已有这个账号！');
 			}
 			else{
-				alert("尝试创建账号失败！请检查网络和输入！");
+				alert("创建账号失败！");
 			}
-		}
-		else if (d3 !== ''){
-			alert('已有这个账号！');
-		}
-		else{
-			alert("创建账号失败！");
 		}
 	};
 	function login_do(){
