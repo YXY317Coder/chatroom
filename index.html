@@ -77,6 +77,10 @@
 			}
 		}
 	};
+	function breaklogin(){
+		window.localStorage.setItem('nowname','null');
+		window.href = 'https://yxy317coder.github.com/chatroom/';
+	}
 	function login_do(){
 		var div = document.getElementById('chatdiv');
   		div.style.display = 'block';
@@ -88,6 +92,9 @@
 		    div.appendChild(newDiv);
 		}
 	};
+	if (window.localStorage.getItem('nowname') !== 'null' && window.localStorage.getItem('nowname') !== null){
+		login_do();
+	}
     </script>
 </head>
 <body>
