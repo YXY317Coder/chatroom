@@ -79,6 +79,7 @@
 	};
 	function breaklogin(){
 		window.localStorage.setItem('nowname','null');
+		alert('已退登！正在刷新网页。');
 		window.location.href = 'https://yxy317coder.github.com/chatroom/';
 	}
 	function login_do(){
@@ -108,7 +109,7 @@
     <input type = "input" id = "phin" placeholder = "密码"></input>
 	<br>
 	<br>
-	<span><button onclick = "login()">登录</button><button onclick = "lange()">注册</button></span>
+	<span><button onclick = "login()">登录</button><button onclick = "lange()">注册</button><button onclick = "breaklogin()">退登</button></span>
     </div>
 	<br>
 	<div id="chatdiv" class = "blim">
