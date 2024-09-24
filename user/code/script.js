@@ -1,6 +1,8 @@
 document.getElementById('blogin').disabled = true;
 document.getElementById('bhome').disabled = true;
 document.getElementById('bhome').disabled = true;
+var getw = window.localStorage.getItem('nowname');
+document.getElementById('myTextarea').value = pt('get',getw + '_ownpage');
     function apt(tin,wm){
 	    return '&' + tin + '=' + wm;
     }
