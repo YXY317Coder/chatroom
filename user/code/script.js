@@ -1,4 +1,5 @@
 document.getElementById('blogin').disabled = true;
+document.getElementById('bhome').disabled = true;
     function apt(tin,wm){
 	    return '&' + tin + '=' + wm;
     }
@@ -98,7 +99,11 @@ document.getElementById('blogin').disabled = true;
 		document.getElementById('blogin').disabled = false;
 		document.getElementById('login').disabled = true;
 		document.getElementById('lange').disabled = true;
+		document.getElementById('bhome').disabled = false;
 	};
+	function home(){
+		window.location.href = 'https://yxy317coder.github.io/chatroom/';
+	}
 	if (window.localStorage.getItem('nowname') !== 'null' && window.localStorage.getItem('nowname') !== null){
 		login_do();
 	}
