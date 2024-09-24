@@ -64,9 +64,7 @@ document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 		var textareaContent = document.getElementById('myTextarea').value;
 		var geto = window.localStorage.getItem('nowname');
 		var try1 = JSON.parse(pt('update',geto + '_ownpage',textareaContent));
-		if (try1[geto + '_ownpage'] === 'success'){
-			document.getElementById('myTextarea').disabled = true;
-		}
+		document.getElementById('myTextarea').disabled = true;
 	}
 	if (window.localStorage.getItem('nowname') !== 'null' && window.localStorage.getItem('nowname') !== null){
 		login_do();
