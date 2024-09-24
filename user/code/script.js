@@ -1,6 +1,4 @@
 document.getElementById('blogin').disabled = true;
-document.getElementById('bhome').disabled = true;
-document.getElementById('bhome').disabled = true;
 var getw = window.localStorage.getItem('nowname');
 var dt = JSON.parse(pt('get',getw + '_ownpage'));
 document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
