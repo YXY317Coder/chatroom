@@ -106,7 +106,7 @@ document.getElementById('bhome').disabled = true;
 		window.location.href = 'https://yxy317coder.github.io/chatroom/';
 	}
 	function newg() {
-		document.getElementById('bhome').disabled = false;
+		document.getElementById('myTextarea').disabled = false;
 	}
 	function safv(){
 		var textareaContent = document.getElementById('myTextarea').value;
