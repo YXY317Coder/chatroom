@@ -42,6 +42,21 @@ document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 		alert('已退登！正在刷新网页。');
 		window.location.href = 'https://yxy317coder.github.io/chatroom/';
 	}
+	function login_do(){
+		var div = document.getElementById('chatdiv');
+  		div.style.display = 'block';
+		var newDiv = document.createElement('h4');
+		newDiv.innerHTML = '当前账户名：' + window.localStorage.getItem('nowname');
+		if (div.children.length > 0) {
+		    div.insertBefore(newDiv, div.children[0]);
+		} else {
+		    div.appendChild(newDiv);
+		}
+		document.getElementById('blogin').disabled = false;
+		document.getElementById('login').disabled = true;
+		document.getElementById('lange').disabled = true;
+		document.getElementById('sigx').disabled = false;
+	};
 	function home(){
 		window.location.href = 'https://yxy317coder.github.io/chatroom/';
 	}
