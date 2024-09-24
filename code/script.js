@@ -1,4 +1,5 @@
 document.getElementById('blogin').disabled = true;
+document.getElementById('sigx').disabled = true;
     function apt(tin,wm){
 	    return '&' + tin + '=' + wm;
     }
@@ -98,6 +99,7 @@ document.getElementById('blogin').disabled = true;
 		document.getElementById('blogin').disabled = false;
 		document.getElementById('login').disabled = true;
 		document.getElementById('lange').disabled = true;
+		document.getElementById('sigx').disabled = false;
 	};
 	function jtgrjy(){
 		window.location.href = 'https://yxy317coder.github.io/chatroom/user/';
