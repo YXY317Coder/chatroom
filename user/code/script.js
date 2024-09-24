@@ -1,5 +1,6 @@
 document.getElementById('blogin').disabled = true;
 document.getElementById('bhome').disabled = true;
+document.getElementById('bhome').disabled = true;
     function apt(tin,wm){
 	    return '&' + tin + '=' + wm;
     }
@@ -103,6 +104,15 @@ document.getElementById('bhome').disabled = true;
 	};
 	function home(){
 		window.location.href = 'https://yxy317coder.github.io/chatroom/';
+	}
+	function newg() {
+		document.getElementById('bhome').disabled = false;
+	}
+	function safv(){
+		var textareaContent = document.getElementById('myTextarea').value;
+		if (){
+			document.getElementById('bhome').disabled = true;
+		}
 	}
 	if (window.localStorage.getItem('nowname') !== 'null' && window.localStorage.getItem('nowname') !== null){
 		login_do();
