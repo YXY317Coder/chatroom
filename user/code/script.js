@@ -52,7 +52,7 @@ document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 		    div.appendChild(newDiv);
 		}
 		document.getElementById('blogin').disabled = false;
-		document.getElementById('blogin').disabled = false;
+		document.getElementById('bhome').disabled = false;
 	};
 	function home(){
 		window.location.href = 'https://yxy317coder.github.io/chatroom/';
