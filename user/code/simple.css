@@ -72,3 +72,12 @@ input {
         padding: 7px;
 		border-radius:10px;
 	}
+	textarea:disabled {
+	  background-color: #c3bed0; 
+	  color: #ffffff;
+	}
+ 
+	textarea:not(:disabled) {
+	  background-color: #ffffff;
+	  color: #000000;
+	}
