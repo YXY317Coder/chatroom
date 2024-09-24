@@ -53,8 +53,6 @@ document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 		    div.appendChild(newDiv);
 		}
 		document.getElementById('blogin').disabled = false;
-		document.getElementById('login').disabled = true;
-		document.getElementById('lange').disabled = true;
 		document.getElementById('sigx').disabled = false;
 	};
 	function home(){
