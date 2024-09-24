@@ -1,4 +1,5 @@
 document.getElementById('blogin').disabled = true;
+document.getElementById('bhome').disabled = true;
 var getw = window.localStorage.getItem('nowname');
 var dt = JSON.parse(pt('get',getw + '_ownpage'));
 document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
@@ -51,6 +52,7 @@ document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 		    div.appendChild(newDiv);
 		}
 		document.getElementById('blogin').disabled = false;
+		document.getElementById('blogin').disabled = false;
 	};
 	function home(){
 		window.location.href = 'https://yxy317coder.github.io/chatroom/';
@@ -68,4 +70,8 @@ document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 	}
 	if (window.localStorage.getItem('nowname') !== 'null' && window.localStorage.getItem('nowname') !== null){
 		login_do();
+	}
+	else{
+		alert('无权访问该页面！');
+		window.location.href = 'https://yxy317coder.github.io/chatroom/';
 	}
