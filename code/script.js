@@ -99,6 +99,9 @@ document.getElementById('blogin').disabled = true;
 		document.getElementById('login').disabled = true;
 		document.getElementById('lange').disabled = true;
 	};
+	function jtgrjy(){
+		window.location.href = 'https://yxy317coder.github.io/chatroom/user/';
+	}
 	if (window.localStorage.getItem('nowname') !== 'null' && window.localStorage.getItem('nowname') !== null){
 		login_do();
 	}
