@@ -72,6 +72,15 @@ input {
         padding: 7px;
 		border-radius:10px;
 	}
+	.dea{
+		border: 1px solid #000000;
+		background-color: #007eff;
+		margin: 0px;
+		margin-left: auto;
+        	color: white;
+        	padding: 7px;
+		border-radius:10px;
+	}
 	textarea:disabled {
 	  background-color: #c3bed0; 
 	  color: #ffffff;
