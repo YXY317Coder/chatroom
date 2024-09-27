@@ -1,7 +1,10 @@
 document.getElementById('blogin').disabled = true;
 document.getElementById('bhome').disabled = true;
 var getw = window.localStorage.getItem('nowname');
-var dt = JSON.parse(pt('get',getw + '_ownpage'));
+var dt = JSON.parse(pt('get',getw + '_ownpage').replace(
+ /(?<=([^{:,]))(")(?=([^}:,]))/g,
+ '\\"'
+ ));
 document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 document.getElementById('shower').innerHTML = dt[getw + '_ownpage']; 
     function apt(tin,wm){
