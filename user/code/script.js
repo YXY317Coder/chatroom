@@ -1,10 +1,13 @@
 document.getElementById('blogin').disabled = true;
 document.getElementById('bhome').disabled = true;
 var getw = window.localStorage.getItem('nowname');
-var dt = JSON.parse(pt('get',getw + '_ownpage').replace(
- /(?<=([^{:,]))(")(?=([^}:,]))/g,
- '\\"'
- ));
+var dt = JSON.parse(pt('get',getw + '_ownpage').replace(/\\(?!u[0-9a-fA-F]{4})/g, '\\\\')
+    .replace(/"/g, '\\"')
+    .replace(/\//g, '\\/')
+    .replace(/\n/g, '\\n')
+    .replace(/\r/g, '\\r')
+    .replace(/\t/g, '\\t')
+    .replace(/\f/g, '\\f'));
 document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 document.getElementById('shower').innerHTML = dt[getw + '_ownpage']; 
     function apt(tin,wm){
