@@ -3,7 +3,7 @@ document.getElementById('bhome').disabled = true;
 var getw = window.localStorage.getItem('nowname');
 var dt = JSON.parse(pt('get',getw + '_ownpage'));
 document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
-document.getElementById('shower').innerHTML = dt[getw + '_ownpage'];
+document.getElementById('shower').innerHTML = document.getElementById('myTextarea').value;
     function apt(tin,wm){
 	    return '&' + tin + '=' + wm;
     }
