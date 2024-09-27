@@ -65,6 +65,7 @@ document.getElementById('myTextarea').value = dt[getw + '_ownpage'];
 		var geto = window.localStorage.getItem('nowname');
 		var try1 = JSON.parse(pt('update',geto + '_ownpage',textareaContent));
 		document.getElementById('myTextarea').disabled = true;
+		window.location.href = 'https://yxy317coder.github.io/chatroom/user';
 	}
 	if (window.localStorage.getItem('nowname') !== 'null' && window.localStorage.getItem('nowname') !== null){
 		login_do();
